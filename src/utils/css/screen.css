@@ -26,11 +26,82 @@ production stylesheet in assets/built/screen.css using gulp dev
 body {
   /* font-family: 'Muli', sans-serif; */
   font-family: var(--font-sans-serif);
-  background: var(--color-bg);
+  background: white;
   transition: background 0.3s ease-out;
   transition-delay: 0.25;
 }
 
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+.banner {
+  max-width: auto;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: auto;
+  height: 100vh;
+}
+.prices {
+  background-color: #84c226;
+  color: #fff;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  width: 15%;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 40px;
+}
+.banner h2 {
+  color: white;
+  font-size: 100px;
+  width: 80%;
+  line-height: 1.1;
+}
+
+.typo p {
+  color: #fff;
+  font-size: 24px;
+}
+.logo.gatsby-image-wrapper {
+  width: 150px;
+}
+
+.arquitectura {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.arquitectura h2 {
+  font-size: 56px;
+}
+.arquitectura div:first-child {
+  padding: 2rem;
+}
+.arquitectura div:nth-child(2) {
+  padding: 8rem;
+}
+.caract h2 {
+  text-align: center;
+}
+
+.ubicacion h2 {
+  text-align: center;
+  font-size: 50px;
+  color: #f0c310;
+}
+
+.containerventas {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}
+.containerventas h2 {
+  color: white;
+}
 .img {
   display: block;
   width: 100%;
@@ -38,6 +109,9 @@ body {
   background-position: center center;
   background-size: cover;
   border-radius: 100%;
+}
+.sectionform {
+  background: #707070;
 }
 
 .hidden {
@@ -50,24 +124,7 @@ body {
 /* ---------------------------------------------------------- */
 
 .site-wrapper {
-  padding: 3vw;
   min-height: 100vh;
-}
-@media (max-width: 850px) {
-  .site-wrapper {
-    padding: 6vw;
-  }
-}
-
-.page-head {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 13vw 0;
-  max-width: 70%;
-  margin: auto;
-  text-align: center;
 }
 
 .error-head {
@@ -99,6 +156,66 @@ body {
   margin: 0;
   font-size: 4.2rem;
   color: var(--color-base);
+}
+input[type="tel"] {
+  background: transparent;
+  color: white;
+}
+
+input[type="text"] {
+  background: transparent;
+  color: white;
+}
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+textarea {
+  background: transparent;
+  color: white;
+}
+.containercontacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+}
+.containercontacto div:first-child {
+  padding: 6rem;
+}
+.containercontacto div:nth-child(2) {
+  padding: 6rem;
+}
+.mensajecontigencia {
+  margin-top: 20px;
+}
+.logosfooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.logosfooter div > img {
+  padding: 6rem;
+}
+.soyadmininput {
+  display: flex;
+}
+.soyadmininput div {
+  margin-right: 15px;
+}
+
+.soyadmininput label {
+  margin-right: 5px;
 }
 @media (max-width: 500px) {
   .page-head-title {
@@ -133,16 +250,21 @@ body {
 /* ---------------------------------------------------------- */
 
 .site-head {
-  position: relative;
+  position: fixed;
   z-index: 300;
   margin-top: -10px;
   font-size: 1.35rem;
+  background: white;
+  width: 100%;
 }
 
 .site-head-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: auto;
+  padding: 2vw;
+  max-width: 1400px;
 }
 
 .site-head-left {
@@ -174,7 +296,7 @@ body {
   padding: 10px 12px;
   color: var(--color-base);
   font-weight: 600;
-  opacity: 0.4;
+  font-size: 18px;
 }
 
 .nav-current a,
@@ -269,11 +391,21 @@ body {
 }
 
 @media (max-width: 850px) {
+  .containercontacto {
+    grid-template-columns: 1fr;
+  }
+  .containercontacto div:first-child {
+    padding: 1rem;
+  }
+  .containercontacto div:nth-child(2) {
+    padding: 1rem;
+  }
   .site-head {
-    padding: 0;
+    padding: 20px;
   }
   .nav-burger {
     display: block;
+    padding: 1rem;
   }
   .site-head-container {
     flex-direction: column;
@@ -299,7 +431,6 @@ body {
     font-size: 2.6rem;
     line-height: 1.15em;
     font-weight: 200;
-    opacity: 0;
     transition: transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99),
       opacity 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: scale(1.1) translateY(-25px);
@@ -314,7 +445,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 3vw 0 0 0;
+    margin: 8vw 0 0 0;
   }
   .site-head-left {
     order: 2;
@@ -361,7 +492,6 @@ body {
 
   .site-head-open .site-head-left a,
   .site-head-open .site-head-right a {
-    opacity: 1;
     transition: transform 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99),
       opacity 0.9s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     transform: scale(1) translateY(0px);
@@ -405,6 +535,25 @@ body {
 }
 
 @media (max-width: 700px) {
+  .prices {
+    width: 60%;
+  }
+  .arquitectura {
+    grid-template-columns: 1fr;
+  }
+  .arquitectura div:first-child {
+    padding: 1rem;
+  }
+  .arquitectura div:nth-child(2) {
+    padding: 1rem;
+  }
+
+  .arquitectura h2 {
+    font-size: 36px;
+  }
+  .banner h2 {
+    font-size: 50px;
+  }
   .post-card {
     flex: 1 1 100%;
     height: 70vw;

@@ -276,12 +276,15 @@ textarea {
 .logosfooter {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
 }
 .logosfooter div > img {
   padding: 6rem;
 }
 .soyadmininput {
   display: flex;
+  flex-direction: column;
 }
 .soyadmininput div {
   margin-right: 15px;
@@ -460,6 +463,9 @@ textarea {
   }
 }
 @media (max-width: 850px) {
+  .logosfooter {
+    grid-template-columns: 1fr;
+  }
   .calltocontainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

@@ -114,6 +114,7 @@ const Userform = () => {
             />
           </div>
           <div className="soyadmininput">
+            <label>Interesado en:</label>
             <div>
               <input
                 onChange={updateInput}

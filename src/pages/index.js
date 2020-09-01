@@ -9,6 +9,7 @@ import Img from "gatsby-image"
 import Userform from "../components/form"
 import corfi from "../../content/assets/corficolombiana.svg"
 import fidu from "../../content/assets/fiducoldex.svg"
+import solida from "../../content/assets/solida.jpg"
 import gym from "../../content/assets/gym.svg"
 import piscina from "../../content/assets/piscina.svg"
 import salon from "../../content/assets/salon.svg"
@@ -16,6 +17,8 @@ import juegos from "../../content/assets/juegos.svg"
 import AwesomeSlider from "react-awesome-slider"
 import withAutoplay from "react-awesome-slider/dist/autoplay"
 import "react-awesome-slider/dist/styles.css"
+import AliceCarousel from "react-alice-carousel"
+import "react-alice-carousel/lib/alice-carousel.css"
 
 // import "../utils/global.scss"
 import "../utils/normalize.css"
@@ -111,6 +114,24 @@ const BlogIndex = ({ data }, location) => {
             <img src={piscina}></img>
             <img src={salon}></img>
             <img src={juegos}></img>
+          </div>
+          <div className="logosmobile">
+            <AliceCarousel organicArrows={true}>
+              <div>
+                <img src={gym}></img>
+              </div>
+              <div>
+                {" "}
+                <img src={piscina}></img>
+              </div>
+              <div>
+                {" "}
+                <img src={salon}></img>
+              </div>
+              <div>
+                <img src={juegos}></img>
+              </div>
+            </AliceCarousel>
           </div>
         </div>
       </div>
@@ -216,7 +237,7 @@ const BlogIndex = ({ data }, location) => {
               <img src={fidu}></img>
             </div>
             <div>
-              <img src={fidu}></img>
+              <img src={solida}></img>
             </div>
           </div>
         </div>
@@ -316,7 +337,7 @@ const indexQuery = graphql`
         }
       }
     }
-    plano1: file(relativePath: { eq: "plano1.jpg" }) {
+    plano1: file(relativePath: { eq: "precio.png" }) {
       childImageSharp {
         fluid(maxWidth: 1189, quality: 100) {
           ...GatsbyImageSharpFluid

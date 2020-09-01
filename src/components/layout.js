@@ -58,13 +58,22 @@ const Layout = props => {
                 <Link to={`/`}>Home</Link>
               </li> */}
               <li className="nav-about" role="menuitem">
-                <Link to="#apartamentos">Apartamentos</Link>
+                <Link
+                  onClick={() => setToggleNav(!toggleNav)}
+                  to="#apartamentos"
+                >
+                  Apartamentos
+                </Link>
               </li>
               <li className="nav-elements" role="menuitem">
-                <Link to="#ubicacion">Ubicación</Link>
+                <Link onClick={() => setToggleNav(!toggleNav)} to="#ubicacion">
+                  Ubicación
+                </Link>
               </li>
               <li className="nav-tags" role="menuitem">
-                <Link to="#footer">Contacto</Link>
+                <Link onClick={() => setToggleNav(!toggleNav)} to="#footer">
+                  Contacto
+                </Link>
               </li>
             </ul>
           </nav>

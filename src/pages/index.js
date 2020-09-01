@@ -50,7 +50,9 @@ const BlogIndex = ({ data }, location) => {
               <p>Excelente calidad de vida a sólo 42 kilómetros de Bogotá</p>
             </div>
 
-            <Link className="prices">Ver precios</Link>
+            <Link to="#apartamentos" className="prices">
+              Ver precios
+            </Link>
           </div>
         </BackgroundImage>
       )}
@@ -113,7 +115,7 @@ const BlogIndex = ({ data }, location) => {
         </div>
       </div>
 
-      <div className="section">
+      <div className="section" id="apartamentos">
         <div className="containercarrusel">
           <div className="planos">
             <AutoplaySlider
@@ -159,7 +161,7 @@ const BlogIndex = ({ data }, location) => {
         </div>
       </div>
 
-      <div className="section">
+      <div className="section" id="ubicacion">
         <div className="container">
           <div className="ubicacion">
             <h2>Ubicación</h2>

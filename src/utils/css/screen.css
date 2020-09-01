@@ -192,6 +192,7 @@ body {
   text-align: center;
   margin-top: 30px;
 }
+
 /* Layout
 /* ---------------------------------------------------------- */
 
@@ -453,8 +454,39 @@ textarea {
   z-index: 9999;
   padding: 12px 12px 12px 0;
 }
-
+@media only screen and (min-width: 1200px) {
+  .calltosection {
+    display: none;
+  }
+}
 @media (max-width: 850px) {
+  .calltocontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    left: 0;
+    grid-gap: 5px;
+  }
+  .calltocontainer img {
+    width: 30%;
+  }
+  .calltocontainer div {
+    padding: 1rem;
+    text-align: center;
+  }
+  .calltocontainer div:first-child {
+    background: #1800cf;
+  }
+  .calltocontainer div:nth-child(2) {
+    background: rgb(74, 201, 89);
+  }
+  .calltocontainer div:nth-child(3) {
+    background: orange;
+  }
+
   .planos .awssld__bullets {
     bottom: -30px !important;
   }
@@ -474,12 +506,18 @@ textarea {
     height: auto;
   }
   .banner {
+    align-items: center;
     height: auto;
     padding: 2rem;
+  }
+
+  .banner h2 {
+    text-align: center;
   }
   .prices {
     width: 45%;
   }
+
   .containerwpp {
     max-width: 1400px;
     margin: auto;

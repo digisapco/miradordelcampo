@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import whatsapp from "../../content/assets/whatsapp.svg"
+import telefono from "../../content/assets/telefono.svg"
+import mensaje from "../../content/assets/mensaje.svg"
 
 const Layout = props => {
   const { title, children } = props
@@ -56,10 +58,10 @@ const Layout = props => {
                 <Link to={`/`}>Home</Link>
               </li> */}
               <li className="nav-about" role="menuitem">
-                <Link to={`/about`}>Apartamentos</Link>
+                <Link to="#apartamentos">Apartamentos</Link>
               </li>
               <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Ubicación</Link>
+                <Link to="#ubicacion">Ubicación</Link>
               </li>
               <li className="nav-tags" role="menuitem">
                 <Link to="#footer">Contacto</Link>
@@ -82,6 +84,19 @@ const Layout = props => {
         <div className="sectionwpp">
           <div className="containerwpp">
             <img src={whatsapp}></img>
+          </div>
+        </div>
+        <div className="calltosection">
+          <div className="calltocontainer">
+            <div>
+              <img src={telefono}></img>
+            </div>
+            <div>
+              <img src={whatsapp}></img>
+            </div>
+            <div>
+              <img src={mensaje}></img>
+            </div>
           </div>
         </div>
         Copyright &copy; {new Date().getFullYear()}{" "}

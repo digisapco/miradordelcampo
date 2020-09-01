@@ -116,7 +116,11 @@ const BlogIndex = ({ data }, location) => {
             <img src={juegos}></img>
           </div>
           <div className="logosmobile">
-            <AliceCarousel organicArrows={true}>
+            <AutoplaySlider
+              organicArrows={true}
+              bullets={false}
+              mobileTouch={true}
+            >
               <div>
                 <img src={gym}></img>
               </div>
@@ -131,7 +135,7 @@ const BlogIndex = ({ data }, location) => {
               <div>
                 <img src={juegos}></img>
               </div>
-            </AliceCarousel>
+            </AutoplaySlider>
           </div>
         </div>
       </div>

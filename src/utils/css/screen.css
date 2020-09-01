@@ -38,11 +38,12 @@ body {
 .banner {
   max-width: auto;
   display: flex;
-  justify-items: center;
+  justify-items: flex-end;
   flex-direction: column;
   max-width: 1400px;
   margin: auto;
   height: 100vh;
+  padding: 8vw 0px 3vw 0px;
 }
 .prices {
   background-color: #84c226;
@@ -65,10 +66,32 @@ body {
   color: #fff;
   font-size: 24px;
 }
+.itemcarrusel .gatsby-image-wrapper {
+  width: 1189px !important;
+}
+
+.itemgaleria .gatsby-image-wrapper {
+  width: 1920px;
+}
 .logo.gatsby-image-wrapper {
   width: 150px;
 }
 
+.containercarrusel {
+  height: 100vh;
+  max-width: 1400px;
+  margin: auto;
+}
+.planos {
+  margin-top: 40px;
+}
+.awssld__bullets .awssld__bullets--active {
+  transform: scale(1) !important;
+}
+
+.awssld__content {
+  background: transparent !important;
+}
 .arquitectura {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -85,7 +108,36 @@ body {
 .caract h2 {
   text-align: center;
 }
-
+.logos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+.containerwpp {
+  max-width: 1400px;
+  margin: auto;
+  position: fixed;
+  top: 80%;
+  left: 90%;
+}
+.containerwpp img {
+  width: 30%;
+}
+.Whatsapp.gatsby-image-wrapper {
+  height: 113px;
+  width: 113px;
+}
+.sectiongaleria {
+  margin-top: 200px;
+}
+.sectiongaleria h2 {
+  text-align: center;
+  color: #84c226;
+  text-transform: uppercase;
+}
+.ubicacion {
+  margin-top: 18rem;
+}
 .ubicacion h2 {
   text-align: center;
   font-size: 50px;
@@ -113,13 +165,33 @@ body {
 .sectionform {
   background: #707070;
 }
+.containerform {
+  max-width: 800px;
+  margin: auto;
+  padding: 1vw;
+}
+
+.containerform h2 {
+  color: #fff;
+  text-align: center;
+}
+.containerform p {
+  text-align: center;
+  color: #fff;
+}
 
 .hidden {
   visibility: hidden;
   position: absolute;
   text-indent: -9999px;
 }
-
+.planos .awssld__bullets {
+  bottom: -20px !important;
+}
+.containercarrusel p {
+  text-align: center;
+  margin-top: 30px;
+}
 /* Layout
 /* ---------------------------------------------------------- */
 
@@ -217,6 +289,7 @@ textarea {
 .soyadmininput label {
   margin-right: 5px;
 }
+
 @media (max-width: 500px) {
   .page-head-title {
     font-size: 2rem;
@@ -259,21 +332,16 @@ textarea {
 }
 
 .site-head-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 60% 40%;
   align-items: center;
-  margin: auto;
-  padding: 2vw;
+  padding: 1vw;
   max-width: 1400px;
+  margin: auto;
 }
 
 .site-head-left {
-  position: relative;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-  white-space: nowrap;
+  order: 1;
 }
 
 .nav {
@@ -306,10 +374,6 @@ textarea {
 }
 
 .site-head-center {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
 
 .site-head-logo {
@@ -391,6 +455,48 @@ textarea {
 }
 
 @media (max-width: 850px) {
+  .planos .awssld__bullets {
+    bottom: -30px !important;
+  }
+  .sectiongaleria {
+    margin-top: 0;
+  }
+  .containercarrusel {
+    padding: 1rem;
+  }
+  .logos {
+    grid-template-columns: 1fr;
+  }
+  .ubicacion {
+    margin-top: 0;
+  }
+  .containercarrusel {
+    height: auto;
+  }
+  .banner {
+    height: auto;
+    padding: 2rem;
+  }
+  .prices {
+    width: 45%;
+  }
+  .containerwpp {
+    max-width: 1400px;
+    margin: auto;
+    padding: 1rem;
+    position: fixed;
+    top: 80%;
+    left: 80%;
+  }
+  .containerwpp img {
+    width: 90%;
+  }
+  .nav-burger {
+    padding-top: 20px;
+  }
+  .site-head-container {
+    display: flex;
+  }
   .containercontacto {
     grid-template-columns: 1fr;
   }
@@ -410,7 +516,7 @@ textarea {
   .site-head-container {
     flex-direction: column;
     justify-content: flex-start;
-    height: 40px;
+    height: 50px;
     background: rgba(255, 255, 255, 0);
     z-index: -1;
     transition: all 0.4s ease-out;
@@ -458,6 +564,8 @@ textarea {
     z-index: auto;
     display: flex;
     justify-content: center;
+    position: relative;
+    bottom: 20px;
   }
   .site-head-right {
     order: 3;
@@ -535,9 +643,6 @@ textarea {
 }
 
 @media (max-width: 700px) {
-  .prices {
-    width: 60%;
-  }
   .arquitectura {
     grid-template-columns: 1fr;
   }

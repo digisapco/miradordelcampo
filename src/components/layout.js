@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
+import whatsapp from "../../content/assets/whatsapp.svg"
 
 const Layout = props => {
   const { title, children } = props
@@ -16,6 +17,13 @@ const Layout = props => {
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 150, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      guasa: file(relativePath: { eq: "whatsapp.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 50, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -54,7 +62,7 @@ const Layout = props => {
                 <Link to={`/elements`}>Ubicación</Link>
               </li>
               <li className="nav-tags" role="menuitem">
-                <Link to={`/tags`}>Contacto</Link>
+                <Link to="#footer">Contacto</Link>
               </li>
             </ul>
           </nav>
@@ -71,14 +79,19 @@ const Layout = props => {
         </div>
       </main>
       <footer className="site-foot">
-        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
-        Built with{" "}
+        <div className="sectionwpp">
+          <div className="containerwpp">
+            <img src={whatsapp}></img>
+          </div>
+        </div>
+        Copyright &copy; {new Date().getFullYear()}{" "}
+        <Link to={`/`}>{title}</Link> &mdash; Desarrollado por{" "}
         <a
-          href="https://gatsbyjs.org"
+          href="https://digisap.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Gatsby
+          Digisap
         </a>
       </footer>
     </div>

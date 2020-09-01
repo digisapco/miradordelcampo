@@ -9,6 +9,13 @@ import Img from "gatsby-image"
 import Userform from "../components/form"
 import corfi from "../../content/assets/corficolombiana.svg"
 import fidu from "../../content/assets/fiducoldex.svg"
+import gym from "../../content/assets/gym.svg"
+import piscina from "../../content/assets/piscina.svg"
+import salon from "../../content/assets/salon.svg"
+import juegos from "../../content/assets/juegos.svg"
+import AwesomeSlider from "react-awesome-slider"
+import withAutoplay from "react-awesome-slider/dist/autoplay"
+import "react-awesome-slider/dist/styles.css"
 
 // import "../utils/global.scss"
 import "../utils/normalize.css"
@@ -16,6 +23,7 @@ import "../utils/css/screen.css"
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
+  const AutoplaySlider = withAutoplay(AwesomeSlider)
 
   return (
     <Layout title={siteTitle}>
@@ -96,7 +104,58 @@ const BlogIndex = ({ data }, location) => {
               CARACTERÍSTICAS
             </h2>
           </div>
-          <div className="logos"></div>
+          <div className="logos">
+            <img src={gym}></img>
+            <img src={piscina}></img>
+            <img src={salon}></img>
+            <img src={juegos}></img>
+          </div>
+        </div>
+      </div>
+
+      <div className="section">
+        <div className="containercarrusel">
+          <div className="planos">
+            <AutoplaySlider
+              organicArrows={false}
+              mobileTouch={true}
+              infinite={true}
+            >
+              <div className="itemcarrusel">
+                <Img fluid={data.plano1.childImageSharp.fluid} />
+              </div>
+              <div className="itemcarrusel">
+                <Img fluid={data.plano2.childImageSharp.fluid} />
+              </div>
+            </AutoplaySlider>
+          </div>
+          <p>
+            Completas zonas comunes y apartamentos de 62 m² y 68 m², con dos o
+            tres habitaciones, dos baños, sala, comedor, cocina, zona de ropas,
+            estudio y balcón.
+          </p>
+        </div>
+      </div>
+
+      <div className="sectiongaleria">
+        <div className="containergaleria">
+          <div>
+            <h2>Galería</h2>
+            <AwesomeSlider>
+              <div className="itemgaleria">
+                <Img fluid={data.img1.childImageSharp.fluid} />
+              </div>
+              <div className="itemgaleria">
+                <Img fluid={data.img2.childImageSharp.fluid} />
+              </div>
+              <div className="itemgaleria">
+                <Img fluid={data.img3.childImageSharp.fluid} />
+              </div>
+              <div className="itemgaleria">
+                <Img fluid={data.img4.childImageSharp.fluid} />
+              </div>
+            </AwesomeSlider>
+          </div>
         </div>
       </div>
 
@@ -161,9 +220,11 @@ const BlogIndex = ({ data }, location) => {
         </div>
       </div>
 
-      <div className="sectionform">
+      <div className="sectionform" id="footer">
         <div className="container">
           <div className="containerform">
+            <h2>¿Deseas qué te contactemos?</h2>
+            <p>Por favor diligencia el formulario de contacto</p>
             <Userform></Userform>
           </div>
         </div>
@@ -249,6 +310,48 @@ const indexQuery = graphql`
     fiducoldex: file(relativePath: { eq: "fiducoldex.png" }) {
       childImageSharp {
         fluid(maxWidth: 150, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    plano1: file(relativePath: { eq: "plano1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1189, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    plano2: file(relativePath: { eq: "plano2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1189, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    img1: file(relativePath: { eq: "img1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    img2: file(relativePath: { eq: "img2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    img3: file(relativePath: { eq: "img3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    img4: file(relativePath: { eq: "img4.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

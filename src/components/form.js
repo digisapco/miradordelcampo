@@ -106,6 +106,7 @@ const Userform = () => {
           </div>
           <div>
             <textarea
+              placeholder="Mensaje"
               onChange={updateInput}
               value={formData.mensaje || ""}
               name="mensaje"

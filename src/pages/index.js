@@ -47,15 +47,17 @@ const BlogIndex = ({ data }, location) => {
           fluid={data.banner.childImageSharp.fluid}
           className="page-header"
         >
-          <div className="banner">
-            <h2>¡El espacio perfecto para ti!</h2>
-            <div className="typo">
-              <p>Excelente calidad de vida a sólo 42 kilómetros de Bogotá</p>
-            </div>
+          <div className="overlay">
+            <div className="banner">
+              <h2>¡El espacio perfecto para ti!</h2>
+              <div className="typo">
+                <p>Excelente calidad de vida a sólo 42 kilómetros de Bogotá</p>
+              </div>
 
-            <Link to="#apartamentos" className="prices">
-              Ver precios
-            </Link>
+              <Link to="#apartamentos" className="prices">
+                Ver precios
+              </Link>
+            </div>
           </div>
         </BackgroundImage>
       )}
@@ -192,6 +194,16 @@ const BlogIndex = ({ data }, location) => {
             <h2>Ubicación</h2>
             <Img fluid={data.ubicacion.childImageSharp.fluid} />
           </div>
+          <div className="containeruta">
+            <a
+              href="https://goo.gl/maps/WdTTE8ExHDdCD2f79"
+              target="_blank"
+              className="ruta"
+            >
+              Crear mi ruta en Google Maps
+            </a>
+            <hr className="lineanegra"></hr>
+          </div>
         </div>
       </div>
 
@@ -234,11 +246,11 @@ const BlogIndex = ({ data }, location) => {
       <div className="section">
         <div className="container">
           <div className="logosfooter">
-            <div>
-              <img src={corfi}></img>
+            <div className="logofooter">
+              <Img fluid={data.corficol.childImageSharp.fluid} />
             </div>
-            <div>
-              <img src={fidu}></img>
+            <div className="logofooter">
+              <Img fluid={data.fiducol.childImageSharp.fluid} />
             </div>
             <div>
               <img src={solida}></img>
@@ -252,6 +264,7 @@ const BlogIndex = ({ data }, location) => {
           <div className="containerform">
             <h2>¿Deseas qué te contactemos?</h2>
             <p>Por favor diligencia el formulario de contacto</p>
+            <hr className="linea"></hr>
             <Userform></Userform>
           </div>
         </div>
@@ -379,6 +392,20 @@ const indexQuery = graphql`
     img4: file(relativePath: { eq: "img4.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    corficol: file(relativePath: { eq: "corficolombiana.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 175, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    fiducol: file(relativePath: { eq: "fiducoldex.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 175, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

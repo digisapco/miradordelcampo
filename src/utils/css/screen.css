@@ -55,11 +55,32 @@ body {
   text-align: center;
   border-radius: 40px;
 }
+.ruta {
+  color: #f0c310;
+  font-size: 22px;
+}
+
+.lineanegra {
+  border-top: 1px solid black;
+}
+.containeruta {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .banner h2 {
   color: white;
   font-size: 100px;
   width: 80%;
   line-height: 1.1;
+}
+
+.linea {
+  border-top: 1px solid #f8c303 !important;
+}
+.overlay {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .typo p {
@@ -77,6 +98,9 @@ body {
   width: 150px;
 }
 
+.logofooter .gatsby-image-wrapper {
+  width: 175px;
+}
 .containercarrusel {
   height: 100vh;
   max-width: 1400px;

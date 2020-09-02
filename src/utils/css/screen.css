@@ -500,6 +500,9 @@ textarea {
   }
 }
 @media (max-width: 850px) {
+  .containerform {
+    padding: 4vw;
+  }
   .awssld__controls {
     visibility: initial !important;
   }

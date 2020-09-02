@@ -500,6 +500,9 @@ textarea {
   }
 }
 @media (max-width: 850px) {
+  .awssld__controls {
+    visibility: initial !important;
+  }
   .itemcarrusel .gatsby-image-wrapper {
     width: 340px !important;
   }

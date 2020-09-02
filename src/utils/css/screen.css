@@ -500,6 +500,13 @@ textarea {
   }
 }
 @media (max-width: 850px) {
+  .itemcarrusel .gatsby-image-wrapper {
+    width: 340px !important;
+  }
+
+  .itemgaleria .gatsby-image-wrapper {
+    width: 1000px;
+  }
   .logos {
     display: none;
   }

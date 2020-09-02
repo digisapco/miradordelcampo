@@ -220,16 +220,18 @@ const BlogIndex = ({ data }, location) => {
         <div className="containercontacto">
           <div>
             <p>
-              <strong>Dirección:</strong> Cra 7 #5-89 Tocancipá. Cundinamarca
+              <strong>Dirección: </strong> Cra 7 #5-89 Tocancipá. Cundinamarca
             </p>
             <p>
-              <strong>Teléfono:</strong> 878-5778
+              <strong>Teléfono: </strong> <a href="tel:8785778">878-5778</a>
             </p>
             <p>
-              <strong>Celular:</strong>316 337 1703 – 300 211 8917
+              <strong>Celular: </strong>{" "}
+              <a href="tel:3163371703">316 337 1703</a> –{" "}
+              <a href="tel:3002118917">300 211 8917</a>
             </p>
             <p>
-              <strong>Horario:</strong>Lunes a Domingo 10:00 am – 5:00 pm.
+              <strong>Horario: </strong>Lunes a Domingo 10:00 am – 5:00 pm.
             </p>
             <p className="mensajecontigencia">
               *Mientras estamos en contingencia vamos a atender por Whatsapp y

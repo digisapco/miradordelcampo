@@ -356,7 +356,7 @@ const indexQuery = graphql`
     }
     plano1: file(relativePath: { eq: "precio.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1189, quality: 100) {
+        fluid(maxWidth: 900, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

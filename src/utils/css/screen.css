@@ -59,6 +59,10 @@ body {
   color: #f0c310;
   font-size: 22px;
 }
+a.ruta:after {
+  content: ">";
+  padding-left: 10px;
+}
 
 .lineanegra {
   border-top: 1px solid black;
@@ -505,6 +509,7 @@ textarea {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
+    align-items: center;
     position: fixed;
     z-index: 9999;
     bottom: 0;

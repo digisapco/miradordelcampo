@@ -102,13 +102,23 @@ a.ruta:after {
   width: 150px;
 }
 
+.titlelogo {
+  grid-column: span 2;
+}
+.logogrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .logofooter .gatsby-image-wrapper {
   width: 175px;
 }
 .containercarrusel {
-  height: 100vh;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
 }
 .planos {
   margin-top: 40px;
@@ -138,7 +148,7 @@ a.ruta:after {
 }
 .logos {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
 }
 
@@ -192,12 +202,15 @@ a.ruta:after {
   border-radius: 100%;
 }
 .sectionform {
-  background: #707070;
+  background: white;
 }
 .containerform {
-  max-width: 800px;
+  max-width: 1200px;
   margin: auto;
-  padding: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
 }
 .containercontacto a {
   color: #333333;
@@ -280,13 +293,13 @@ input[type="text"] {
   color: white;
 }
 ::placeholder {
-  color: white;
+  color: #646464;
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: white;
+  color: #646464;
 }
 
 ::-ms-input-placeholder {
@@ -305,13 +318,17 @@ textarea {
   align-items: center;
 }
 .containercontacto div:first-child {
-  padding: 6rem;
+  padding: 1rem;
 }
 .containercontacto div:nth-child(2) {
   padding: 6rem;
 }
 .mensajecontigencia {
   margin-top: 20px;
+  background: #ff5527;
+  color: white;
+  padding: 4px;
+  font-style: italic;
 }
 .logosfooter {
   display: grid;
@@ -332,6 +349,29 @@ textarea {
 
 .soyadmininput label {
   margin-right: 5px;
+}
+label {
+  color: #646464;
+  font-weight: 600;
+}
+
+.sectionfooter {
+  background: #84c226;
+}
+.containerfooter {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.containerfooter p {
+  text-align: center;
+  color: white;
+}
+.containerfooter h2 {
+  color: white;
 }
 
 @media (max-width: 500px) {
@@ -415,9 +455,6 @@ textarea {
 .site-head a:hover {
   text-decoration: none;
   opacity: 1;
-}
-
-.site-head-center {
 }
 
 .site-head-logo {

@@ -150,7 +150,7 @@ const Userform = () => {
             <label>Acepto términos y políticas de privacidad.</label>
           </div>
           <div>
-            <input type="submit" />
+            <input className="boton" type="submit" />
           </div>
         </form>
       </div>

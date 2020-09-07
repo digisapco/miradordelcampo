@@ -166,16 +166,16 @@ const BlogIndex = ({ data }, location) => {
               mobileTouch={true}
             >
               <div className="logmobile">
-                <Img fixed={data.gympng.childImageSharp.fixed} />
+                <img src={gym}></img>
               </div>
               <div className="logmobile">
-                <Img fixed={data.piscinapng.childImageSharp.fixed} />
+                <img src={piscina}></img>
               </div>
               <div className="logmobile">
-                <Img fixed={data.socialpng.childImageSharp.fixed} />
+                <img src={salon}></img>
               </div>
               <div className="logmobile">
-                <Img fixed={data.juegospng.childImageSharp.fixed} />
+                <img src={juegos}></img>
               </div>
             </AutoplaySlider>
           </div>

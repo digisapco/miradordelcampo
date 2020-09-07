@@ -32,8 +32,12 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
+}
+
+.planos .awssld__container {
+  height: 600px !important;
 }
 .banner {
   max-width: auto;
@@ -46,7 +50,7 @@ body {
   padding: 8vw 0px 3vw 0px;
 }
 .prices {
-  background-color: #84c226;
+  background-color: #ff5527;
   color: #fff;
   padding: 1em 1.5em;
   text-decoration: none;
@@ -56,8 +60,11 @@ body {
   border-radius: 40px;
 }
 .ruta {
-  color: #f0c310;
+  color: white;
   font-size: 22px;
+  background: #f0c310;
+  border-radius: 40px;
+  padding: 10px;
 }
 a.ruta:after {
   content: ">";
@@ -113,7 +120,7 @@ a.ruta:after {
   width: 175px;
 }
 .containercarrusel {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -205,12 +212,17 @@ a.ruta:after {
   background: white;
 }
 .containerform {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   align-items: center;
+  box-shadow: 0px 3px 6px #707070;
+  padding: 30px;
+  position: relative;
+  bottom: 40px;
+  background: white;
 }
 .containercontacto a {
   color: #333333;
@@ -243,6 +255,11 @@ a.ruta:after {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .calltocontainer {
     grid-gap: 1px;
+  }
+  .logogrid {
+    grid-template-columns: 1fr;
+  }
+  .imagepiscina .gatsby-image-wrapper {
   }
 }
 
@@ -313,7 +330,7 @@ textarea {
 .containercontacto {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   align-items: center;
 }
@@ -358,8 +375,12 @@ label {
 .sectionfooter {
   background: #84c226;
 }
+.containergaleria {
+  max-width: 1400px;
+  margin: auto;
+}
 .containerfooter {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -543,8 +564,16 @@ label {
   }
 }
 @media (max-width: 850px) {
+  .containercarrusel {
+    grid-template-columns: 1fr;
+  }
+
+  .ruta {
+    font-size: 16px;
+  }
   .containerform {
-    padding: 4vw;
+    grid-template-columns: 1fr;
+    padding: 0;
   }
   .awssld__controls {
     visibility: initial !important;
@@ -599,7 +628,7 @@ label {
   }
 
   .planos .awssld__bullets {
-    bottom: -30px !important;
+    bottom: 35px !important;
   }
   .sectiongaleria {
     margin-top: 0;
@@ -626,11 +655,11 @@ label {
     text-align: center;
   }
   .prices {
-    width: 45%;
+    width: 60%;
   }
 
   .containerwpp {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: auto;
     padding: 1rem;
     position: fixed;

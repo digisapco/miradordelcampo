@@ -55,8 +55,8 @@ const BlogIndex = ({ data }, location) => {
                 <p>Excelente calidad de vida a sólo 42 kilómetros de Bogotá</p>
               </div>
 
-              <Link to="#apartamentos" className="prices">
-                Ver precios
+              <Link to="#footer" className="prices">
+                Más información
               </Link>
             </div>
           </div>
@@ -292,12 +292,15 @@ const BlogIndex = ({ data }, location) => {
       </div>
 
       <div className="sectionform" id="footer">
-        <div className="container">
+        <div className="containerformulario">
           <div className="containerform">
-            <div>
+            <div className="colform">
               <Img fixed={data.imgcontact.childImageSharp.fixed} />
             </div>
-            <Userform></Userform>
+            <div className="colform">
+              {" "}
+              <Userform></Userform>
+            </div>
           </div>
         </div>
       </div>

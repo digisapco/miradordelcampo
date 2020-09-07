@@ -18,8 +18,9 @@ import plano1 from "../../content/assets/precio.png"
 import AwesomeSlider from "react-awesome-slider"
 import withAutoplay from "react-awesome-slider/dist/autoplay"
 import "react-awesome-slider/dist/styles.css"
-import AliceCarousel from "react-alice-carousel"
-import "react-alice-carousel/lib/alice-carousel.css"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 // import "../utils/global.scss"
 import "../utils/normalize.css"
@@ -28,6 +29,14 @@ import "../utils/css/screen.css"
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
   const AutoplaySlider = withAutoplay(AwesomeSlider)
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  }
 
   return (
     <Layout title={siteTitle}>
@@ -43,24 +52,49 @@ const BlogIndex = ({ data }, location) => {
       />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (
-        <BackgroundImage
-          style={{ backgroundSize: "cover" }}
-          fluid={data.banner.childImageSharp.fluid}
-          className="page-header"
-        >
-          <div className="overlay">
-            <div className="banner">
-              <h2>¡El espacio perfecto para ti!</h2>
-              <div className="typo">
-                <p>Excelente calidad de vida a sólo 42 kilómetros de Bogotá</p>
-              </div>
+        <Slider {...settings}>
+          <BackgroundImage
+            style={{ backgroundSize: "cover" }}
+            fluid={data.banner.childImageSharp.fluid}
+            className="page-header"
+          >
+            <div className="overlay">
+              <div className="banner">
+                <h2>¡El espacio perfecto para ti!</h2>
+                <div className="typo">
+                  <p>
+                    Excelente calidad de vida a sólo 42 kilómetros de Bogotá
+                  </p>
+                </div>
 
-              <Link to="#footer" className="prices">
-                Más información
-              </Link>
+                <Link to="#footer" className="prices">
+                  Más información
+                </Link>
+              </div>
             </div>
-          </div>
-        </BackgroundImage>
+          </BackgroundImage>
+
+          <BackgroundImage
+            style={{ backgroundSize: "cover" }}
+            fluid={data.banner2.childImageSharp.fluid}
+            className="page-header"
+          >
+            <div className="overlay">
+              <div className="banner">
+                <h2>¡El espacio perfecto para ti!</h2>
+                <div className="typo">
+                  <p>
+                    Excelente calidad de vida a sólo 42 kilómetros de Bogotá
+                  </p>
+                </div>
+
+                <Link to="#footer" className="prices">
+                  Más información
+                </Link>
+              </div>
+            </div>
+          </BackgroundImage>
+        </Slider>
       )}
       <div className="section">
         <div className="container">
@@ -341,6 +375,13 @@ const indexQuery = graphql`
     }
 
     banner: file(relativePath: { eq: "banner.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    banner2: file(relativePath: { eq: "banner2.png" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid

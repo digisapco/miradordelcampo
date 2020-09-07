@@ -35,7 +35,13 @@ body {
   max-width: 1200px;
   margin: auto;
 }
-
+.slick-prev:before,
+.slick-next:before {
+  font-size: 36px !important;
+}
+.slick-next {
+  right: 20px !important;
+}
 .planos .awssld__container {
   height: 600px !important;
 }
@@ -374,6 +380,7 @@ label {
 
 .sectionfooter {
   background: #84c226;
+  padding-bottom: 40px;
 }
 .containergaleria {
   max-width: 1400px;
@@ -564,6 +571,29 @@ label {
   }
 }
 @media (max-width: 850px) {
+  .typo p {
+    text-align: center;
+  }
+  .colform .gatsby-image-wrapper {
+    width: 100% !important;
+    height: 235px !important;
+  }
+  div#footer.sectionform {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .containerform {
+    bottom: 35px;
+  }
+
+  .sectionfooter {
+    padding-bottom: 35px;
+  }
+
+  .wrapperform {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .containercarrusel {
     grid-template-columns: 1fr;
   }
@@ -655,7 +685,7 @@ label {
     text-align: center;
   }
   .prices {
-    width: 60%;
+    width: 65%;
   }
 
   .containerwpp {

@@ -41,6 +41,8 @@
     "react-helmet": "^5.2.1",
     "react-hook-form": "^6.7.0",
     "react-multi-carousel": "^2.5.5",
+    "react-slick": "^0.27.11",
+    "slick-carousel": "^1.8.1",
     "sweetalert": "^2.1.2",
     "sweetalert-react": "^0.4.11",
     "typeface-alegreya": "^0.0.69",

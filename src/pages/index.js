@@ -166,16 +166,16 @@ const BlogIndex = ({ data }, location) => {
               mobileTouch={true}
             >
               <div className="logmobile">
-                <img src={gym}></img>
+                <Img fixed={data.gympng.childImageSharp.fixed} />
               </div>
               <div className="logmobile">
-                <img src={piscina}></img>
+                <Img fixed={data.piscinapng.childImageSharp.fixed} />
               </div>
               <div className="logmobile">
-                <img src={salon}></img>
+                <Img fixed={data.juegospng.childImageSharp.fixed} />
               </div>
               <div className="logmobile">
-                <img src={juegos}></img>
+                <Img fixed={data.socialpng.childImageSharp.fixed} />
               </div>
             </AutoplaySlider>
           </div>
@@ -500,32 +500,32 @@ const indexQuery = graphql`
       }
     }
 
-    gympng: file(relativePath: { eq: "gympng.png" }) {
+    gympng: file(relativePath: { eq: "gimnasio.png" }) {
       childImageSharp {
-        fixed(width: 70, height: 70) {
+        fixed(width: 90, height: 116) {
           ...GatsbyImageSharpFixed
         }
       }
     }
 
-    piscinapng: file(relativePath: { eq: "piscinapng.png" }) {
+    piscinapng: file(relativePath: { eq: "pool.png" }) {
       childImageSharp {
-        fixed(width: 70, height: 70) {
+        fixed(width: 71, height: 119) {
           ...GatsbyImageSharpFixed
         }
       }
     }
 
-    socialpng: file(relativePath: { eq: "socialpng.png" }) {
+    socialpng: file(relativePath: { eq: "salonsocial.png" }) {
       childImageSharp {
-        fixed(width: 70, height: 70) {
+        fixed(width: 114, height: 112) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    juegospng: file(relativePath: { eq: "juegospng.png" }) {
+    juegospng: file(relativePath: { eq: "juegos.png" }) {
       childImageSharp {
-        fixed(width: 70, height: 70) {
+        fixed(width: 162, height: 108) {
           ...GatsbyImageSharpFixed
         }
       }

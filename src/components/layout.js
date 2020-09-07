@@ -104,7 +104,9 @@ const Layout = props => {
               <img src={whatsapp}></img>
             </div>
             <div>
-              <img src={mensaje}></img>
+              <a href="#footer">
+                <img src={mensaje}></img>
+              </a>
             </div>
           </div>
         </div>

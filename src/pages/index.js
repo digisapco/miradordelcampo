@@ -165,19 +165,17 @@ const BlogIndex = ({ data }, location) => {
               bullets={false}
               mobileTouch={true}
             >
-              <div>
-                <img src={gym}></img>
+              <div className="logmobile">
+                <Img fixed={data.gympng.childImageSharp.fixed} />
               </div>
-              <div>
-                {" "}
-                <img src={piscina}></img>
+              <div className="logmobile">
+                <Img fixed={data.piscinapng.childImageSharp.fixed} />
               </div>
-              <div>
-                {" "}
-                <img src={salon}></img>
+              <div className="logmobile">
+                <Img fixed={data.socialpng.childImageSharp.fixed} />
               </div>
-              <div>
-                <img src={juegos}></img>
+              <div className="logmobile">
+                <Img fixed={data.juegospng.childImageSharp.fixed} />
               </div>
             </AutoplaySlider>
           </div>
@@ -497,6 +495,37 @@ const indexQuery = graphql`
     imgcontact: file(relativePath: { eq: "imgcontact.png" }) {
       childImageSharp {
         fixed(width: 672, height: 496) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    gympng: file(relativePath: { eq: "gympng.png" }) {
+      childImageSharp {
+        fixed(width: 70, height: 70) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    piscinapng: file(relativePath: { eq: "piscinapng.png" }) {
+      childImageSharp {
+        fixed(width: 70, height: 70) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    socialpng: file(relativePath: { eq: "socialpng.png" }) {
+      childImageSharp {
+        fixed(width: 70, height: 70) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    juegospng: file(relativePath: { eq: "juegospng.png" }) {
+      childImageSharp {
+        fixed(width: 70, height: 70) {
           ...GatsbyImageSharpFixed
         }
       }

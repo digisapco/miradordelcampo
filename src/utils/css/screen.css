@@ -619,14 +619,7 @@ label {
     padding: 0px;
     margin-top: 40px;
   }
-  button.slick-arrow.slick-prev {
-    top: 90%;
-    left: 30% !important;
-  }
-  button.slick-arrow.slick-next {
-    top: 90%;
-    right: 40% !important;
-  }
+
   .typo p {
     text-align: center;
   }
@@ -733,7 +726,7 @@ label {
   }
   .banner {
     align-items: center;
-    height: 550px;
+    height: auto;
     padding: 3rem;
   }
 

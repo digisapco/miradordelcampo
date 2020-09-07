@@ -31,6 +31,9 @@ body {
   transition-delay: 0.25;
 }
 
+ul.slick-dots {
+  display: none !important;
+}
 .container {
   max-width: 1200px;
   margin: auto;
@@ -42,8 +45,40 @@ body {
 .slick-next {
   right: 20px !important;
 }
+
+.slick-prev {
+  left: 20px !important;
+  z-index: 9999 !important;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #3a3636ed !important;
+}
 .planos .awssld__container {
   height: 600px !important;
+}
+.containerverde {
+  background: #84c226;
+  padding: 4rem;
+}
+.containerverde p {
+  color: white;
+}
+.imagepiscina {
+  padding: 60px;
+}
+.imagepiscina:before {
+  content: "";
+  height: 156px;
+  width: 102%;
+  background: #f0c310;
+  position: absolute;
+  bottom: -15px;
+  right: 0px;
+  z-index: -1;
+}
+.imagepiscina {
+  position: relative;
 }
 .banner {
   max-width: auto;
@@ -265,7 +300,15 @@ a.ruta:after {
   .logogrid {
     grid-template-columns: 1fr;
   }
+  .banner {
+    height: 700px;
+    padding: 1rem;
+  }
+  .banner h2 {
+    font-size: 60px;
+  }
   .imagepiscina .gatsby-image-wrapper {
+    width: 100% !important;
   }
 }
 
@@ -570,7 +613,20 @@ label {
     display: none;
   }
 }
+
 @media (max-width: 850px) {
+  .imagepiscina {
+    padding: 0px;
+    margin-top: 40px;
+  }
+  button.slick-arrow.slick-prev {
+    top: 90%;
+    left: 30% !important;
+  }
+  button.slick-arrow.slick-next {
+    top: 90%;
+    right: 40% !important;
+  }
   .typo p {
     text-align: center;
   }
@@ -677,8 +733,8 @@ label {
   }
   .banner {
     align-items: center;
-    height: auto;
-    padding: 2rem;
+    height: 550px;
+    padding: 3rem;
   }
 
   .banner h2 {
@@ -689,12 +745,7 @@ label {
   }
 
   .containerwpp {
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem;
-    position: fixed;
-    top: 80%;
-    left: 80%;
+    display: none;
   }
   .containerwpp img {
     width: 90%;

@@ -120,7 +120,7 @@ const BlogIndex = ({ data }, location) => {
       </div>
 
       <div className="section">
-        <div className="container">
+        <div className="containerverde">
           <div>
             <p
               style={{

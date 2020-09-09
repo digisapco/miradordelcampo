@@ -85,7 +85,7 @@ ul.slick-dots {
   display: flex;
   justify-items: flex-end;
   flex-direction: column;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
   height: 100vh;
   padding: 8vw 0px 3vw 0px;
@@ -161,7 +161,7 @@ a.ruta:after {
   width: 175px;
 }
 .containercarrusel {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -253,7 +253,7 @@ a.ruta:after {
   background: white;
 }
 .containerform {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -379,7 +379,7 @@ textarea {
 .containercontacto {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
   align-items: center;
 }
@@ -426,11 +426,11 @@ label {
   padding-bottom: 40px;
 }
 .containergaleria {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
 }
 .containerfooter {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -490,8 +490,8 @@ label {
   display: grid;
   grid-template-columns: 60% 40%;
   align-items: center;
-  padding: 1vw;
-  max-width: 1400px;
+  padding: 1vw 0 1vw 0;
+  max-width: 1200px;
   margin: auto;
 }
 

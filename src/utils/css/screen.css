@@ -349,12 +349,12 @@ a.ruta:after {
 }
 input[type="tel"] {
   background: transparent;
-  color: white;
+  color: black;
 }
 
 input[type="text"] {
   background: transparent;
-  color: white;
+  color: black;
 }
 ::placeholder {
   color: #646464;
@@ -368,11 +368,11 @@ input[type="text"] {
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: white;
+  color: black;
 }
 textarea {
   background: transparent;
-  color: white;
+  color: black;
 }
 .containercontacto {
   display: grid;

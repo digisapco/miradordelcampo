@@ -30,11 +30,19 @@ body {
   transition: background 0.3s ease-out;
   transition-delay: 0.25;
 }
-
+.containertratamiento {
+  margin: auto;
+  max-width: 1200px;
+}
 ul.slick-dots {
   display: none !important;
 }
 .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.containerlogos {
   max-width: 1200px;
   margin: auto;
 }
@@ -195,7 +203,10 @@ a.ruta:after {
 .logos {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
+}
+
+.alinearmeloyo {
+  margin-left: 50px;
 }
 
 .containerwpp {
@@ -614,6 +625,9 @@ label {
 }
 
 @media (max-width: 850px) {
+  .containertratamiento {
+    padding: 1rem;
+  }
   .imagepiscina {
     padding: 0px;
     margin-top: 40px;
@@ -1057,7 +1071,7 @@ label {
 /* ---------------------------------------------------------- */
 
 .post-content {
-  max-width: 720px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 6vw 0;
 }

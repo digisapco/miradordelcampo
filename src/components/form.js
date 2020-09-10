@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Axios, db } from "../firebase/firebaseConfig"
 import { useForm } from "react-hook-form"
+import { Link } from "gatsby"
 import "./form.css"
 import swal from "sweetalert"
 
@@ -147,7 +148,10 @@ const Userform = () => {
               name="politicas"
               ref={register}
             />
-            <label>Acepto términos y políticas de privacidad.</label>
+            <label>
+              Acepto términos y{" "}
+              <Link to="/politicas">políticas de privacidad.</Link>
+            </label>
           </div>
           <div>
             <input className="boton" type="submit" value="Enviar" />

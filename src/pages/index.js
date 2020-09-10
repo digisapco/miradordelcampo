@@ -149,10 +149,19 @@ const BlogIndex = ({ data }, location) => {
                   CARACTERÍSTICAS
                 </h2>
               </div>
-              <img src={gym}></img>
-              <img src={piscina}></img>
-              <img src={salon}></img>
-              <img src={juegos}></img>
+              <div>
+                <img src={gym}></img>
+              </div>
+              <div className="alinearmeloyo">
+                <img src={piscina}></img>
+              </div>
+              <div>
+                <img src={salon}></img>
+              </div>
+              <div>
+                {" "}
+                <img src={juegos}></img>
+              </div>
             </div>
             <div className="imagepiscina">
               <Img fixed={data.piscina.childImageSharp.fixed} />

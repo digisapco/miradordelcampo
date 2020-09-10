@@ -2,3 +2,6 @@ form {
   display: grid;
   grid-gap: 20px;
 }
+a {
+  color: #84c226 !important;
+}

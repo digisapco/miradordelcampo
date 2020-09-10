@@ -2,6 +2,6 @@ form {
   display: grid;
   grid-gap: 20px;
 }
-a {
+.linkito {
   color: #84c226 !important;
 }

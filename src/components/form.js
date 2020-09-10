@@ -150,7 +150,9 @@ const Userform = () => {
             />
             <label>
               Acepto términos y{" "}
-              <Link to="/politicas">políticas de privacidad.</Link>
+              <Link className="linkito" to="/politicas">
+                políticas de privacidad.
+              </Link>
             </label>
           </div>
           <div>

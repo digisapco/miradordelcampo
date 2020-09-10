@@ -64,9 +64,7 @@ ul.slick-dots {
 .containerverde p {
   color: white;
 }
-.imagepiscina {
-  padding: 60px;
-}
+
 .imagepiscina:before {
   content: "";
   height: 156px;
@@ -189,7 +187,7 @@ a.ruta:after {
   padding: 2rem;
 }
 .arquitectura div:nth-child(2) {
-  padding: 8rem;
+  padding-left: 6rem;
 }
 .caract h2 {
   text-align: center;
@@ -387,7 +385,7 @@ textarea {
   padding: 1rem;
 }
 .containercontacto div:nth-child(2) {
-  padding: 6rem;
+  padding-left: 6rem;
 }
 .mensajecontigencia {
   margin-top: 20px;
@@ -501,9 +499,10 @@ label {
 
 .nav {
   display: flex;
-  margin: 0 0 0 -12px;
+  margin: 0 0 0 0;
   padding: 0;
   list-style: none;
+  justify-content: flex-end;
 }
 
 .site-head li {

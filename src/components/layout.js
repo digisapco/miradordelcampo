@@ -92,7 +92,13 @@ const Layout = props => {
       <footer className="site-foot">
         <div className="sectionwpp">
           <div className="containerwpp">
-            <img src={whatsapp}></img>
+            <a
+              id="daleboquita"
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=573002118917&text=Hola,%20estoy%20interesad@%20en%20el%20proyecto%20Mirador%20del%20campo"
+            >
+              <img src={whatsapp}></img>
+            </a>
           </div>
         </div>
         <div className="calltosection">
@@ -101,7 +107,13 @@ const Layout = props => {
               <img src={telefono}></img>
             </div>
             <div>
-              <img src={whatsapp}></img>
+              <a
+                id="daleboquita"
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=573002118917&text=Hola,%20estoy%20interesad@%20en%20el%20proyecto%20Mirador%20del%20campo"
+              >
+                <img src={whatsapp}></img>
+              </a>
             </div>
             <div>
               <a href="#footer">

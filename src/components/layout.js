@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
-import whatsapp from "../../content/assets/whatsapp.svg"
+import whatsapp from "../../content/assets/whatsapp.png"
 import telefono from "../../content/assets/telefono.svg"
 import mensaje from "../../content/assets/mensaje.svg"
 

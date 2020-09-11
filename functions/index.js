@@ -30,7 +30,8 @@ exports.submit = functions.https.onRequest((req, res) => {
       const mailOptions = {
         from: req.body.email,
         replyTo: req.body.email,
-        to: "digisap.com@gmail.com, digisapco@gmail.com",
+        to:
+          "digisap.com@gmail.com, digisapco@gmail.com, miradordelcampo@gmail.com",
         subject: `${req.body.nombre} Mensaje enviado desde Landing Mirador del campo`,
         text: req.body.mensaje,
         html: `<p>${req.body.mensaje}</p>

@@ -83,11 +83,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "968170020351159",
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-177215860-1",
       },
     },
+
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,

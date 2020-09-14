@@ -103,7 +103,9 @@ const Layout = props => {
         <div className="calltosection">
           <div className="calltocontainer">
             <div>
-              <img src={telefono}></img>
+              <a href="tel:3002118917">
+                <img src={telefono}></img>
+              </a>
             </div>
             <div>
               <a

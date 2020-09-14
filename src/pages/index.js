@@ -107,7 +107,7 @@ const BlogIndex = ({ data }, location) => {
                 con la naturaleza
               </h2>
               <p>
-                Mirador del Campo es un proyecto ubicado en Zipaquirá con Seis
+                Mirador del Campo es un proyecto ubicado en Tocancipá con Seis
                 torres de cinco niveles, un municipio con tintes campestres a
                 sólo 42 kilómetros de Bogotá.
               </p>

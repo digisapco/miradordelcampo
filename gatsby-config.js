@@ -13,6 +13,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-hubspot",
+      options: {
+        trackingCode: "9017286",
+        respectDNT: true,
+        productionOnly: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,

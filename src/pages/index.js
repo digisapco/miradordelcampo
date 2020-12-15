@@ -326,7 +326,7 @@ const BlogIndex = ({ data }, location) => {
       <div className="sectionfooter">
         <div className="containerfooter">
           <div>
-            <h2>¿Deseas qué te contactemos?</h2>
+            <h2>¿Deseas qué te contactemos? </h2>
             <p>Por favor diligencia el formulario de contacto</p>
           </div>
         </div>

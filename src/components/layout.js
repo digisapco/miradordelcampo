@@ -132,7 +132,11 @@ const Layout = props => {
           Digisap
         </a>
       </footer>
+      
+
+      <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/9017286.js"></script>
     </div>
+    
   )
 }
 

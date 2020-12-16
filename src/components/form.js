@@ -47,11 +47,18 @@ const Userform = () => {
       alcobas: "",
       politicas: "",
     })
+
+
   }
 
   const sendEmail = () => {
-    Axios.post(
+    const headers_ome = {
+      'Content-Type': 'application/json',
+      "Access-Control-Allow-Origin": "*"
+    }
+    Axios.post( 
       "https://us-central1-landingmirador.cloudfunctions.net/submit",
+      {headers: headers_ome},
       formData
     )
       .then(res => {
@@ -69,7 +76,8 @@ const Userform = () => {
         console.log(error)
       })
   }
-  console.log(errors)
+
+  
 
   return (
     <>

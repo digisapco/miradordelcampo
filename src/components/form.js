@@ -50,32 +50,31 @@ const Userform = () => {
   }
 
   const sendEmail = () => {
-    fetch("https://us-central1-landingmirador.cloudfunctions.net/submit",{
-      method : 'POST',
-      mode : 'no-cors',
-      referrerPolicy : 'no-referrer',
-      credentials: 'same-origin',
-      headers : {
-        'Content-Type': 'application/json'
+    fetch("https://us-central1-landingmirador.cloudfunctions.net/submit", {
+      method: "POST",
+      mode: "no-cors",
+      referrerPolicy: "no-referrer",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
       },
-      body : JSON.stringify(formData)
+      body: JSON.stringify(formData),
     })
-    .then((res) => {
-      db.collection("emails").add({
-        nombre: formData.name,
-        email: formData.empresa,
-        telefono: formData.email,
-        mensaje: formData.telefono,
-        alcobas: formData.message,
-        politicas: formData.message,
-        time: new Date(),
+      .then(res => {
+        db.collection("emails").add({
+          nombre: formData.name,
+          email: formData.empresa,
+          telefono: formData.email,
+          mensaje: formData.telefono,
+          alcobas: formData.message,
+          politicas: formData.message,
+          time: new Date(),
+        })
       })
-    })
-    .catch(error => {
-      console.error(error)
-    });
+      .catch(error => {
+        console.error(error)
+      })
   }
-  console.log(errors)
 
   return (
     <>

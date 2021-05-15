@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Axios, db } from "../firebase/firebaseConfig"
+import { db } from "../firebase/firebaseConfig"
 import { useForm } from "react-hook-form"
 import { Link } from "gatsby"
 import "./form.css"
@@ -41,7 +41,6 @@ const Userform = () => {
     setFormData({
       nombre: "",
       email: "",
-      telefono: "",
       telefono: "",
       mensaje: "",
       alcobas: "",

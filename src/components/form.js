@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Axios, db } from "../firebase/firebaseConfig"
+import { db } from "../firebase/firebaseConfig"
 import { useForm } from "react-hook-form"
 import { Link } from "gatsby"
 import "./form.css"
@@ -42,7 +42,6 @@ const Userform = () => {
       nombre: "",
       email: "",
       telefono: "",
-      telefono: "",
       mensaje: "",
       alcobas: "",
       politicas: "",
@@ -50,10 +49,16 @@ const Userform = () => {
   }
 
   const sendEmail = () => {
-    Axios.post(
-      "https://us-central1-landingmirador.cloudfunctions.net/submit",
-      formData
-    )
+    fetch("https://us-central1-landingmirador.cloudfunctions.net/submit", {
+      method: "POST",
+      mode: "no-cors",
+      referrerPolicy: "no-referrer",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
       .then(res => {
         db.collection("emails").add({
           nombre: formData.name,
@@ -66,10 +71,9 @@ const Userform = () => {
         })
       })
       .catch(error => {
-        console.log(error)
+        console.error(error)
       })
   }
-  console.log(errors)
 
   return (
     <>

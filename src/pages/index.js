@@ -150,17 +150,17 @@ const BlogIndex = ({ data }, location) => {
                 </h2>
               </div>
               <div>
-                <img src={gym}></img>
+                <img src={gym} alt="" />
               </div>
               <div className="alinearmeloyo">
-                <img src={piscina}></img>
+                <img src={piscina} alt="" />
               </div>
               <div>
-                <img src={salon}></img>
+                <img src={salon} alt="" />
               </div>
               <div>
                 {" "}
-                <img src={juegos}></img>
+                <img src={juegos} alt="" />
               </div>
             </div>
             <div className="imagepiscina">
@@ -201,10 +201,10 @@ const BlogIndex = ({ data }, location) => {
                 infinite={true}
               >
                 <div className="itemcarrusel">
-                  <img src={plano1}></img>
+                  <img src={plano1} alt="" />
                 </div>
                 <div className="itemcarrusel">
-                  <img src={plano1}></img>
+                  <img src={plano1} alt="" />
                 </div>
               </AutoplaySlider>
             </div>
@@ -261,6 +261,7 @@ const BlogIndex = ({ data }, location) => {
               href="https://goo.gl/maps/WdTTE8ExHDdCD2f79"
               target="_blank"
               className="ruta"
+              rel="noreferrer"
             >
               Crear mi ruta en Google Maps
             </a>
@@ -317,7 +318,7 @@ const BlogIndex = ({ data }, location) => {
               <Img fluid={data.fiducol.childImageSharp.fluid} />
             </div>
             <div>
-              <img src={solida}></img>
+              <img src={solida} alt="" />
             </div>
           </div>
         </div>

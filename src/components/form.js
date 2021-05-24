@@ -129,7 +129,7 @@ const Userform = () => {
                 value="2 alcobas"
                 ref={register({ required: true })}
               />
-              <label>2 Alcobas</label>
+              <label> 2 Alcobas </label>
             </div>
             <div>
               <input
@@ -140,7 +140,7 @@ const Userform = () => {
                 value="3 alcobas"
                 ref={register({ required: true })}
               />
-              <label>3 Alcobas</label>
+              <label> 3 Alcobas </label>
             </div>
           </div>
           <div>

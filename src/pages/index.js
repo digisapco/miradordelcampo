@@ -341,7 +341,7 @@ const BlogIndex = ({ data }, location) => {
             </div>
             <div className="colform">
               {" "}
-              <Userform></Userform>
+              <Userform />
             </div>
           </div>
         </div>

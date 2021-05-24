@@ -49,6 +49,7 @@ const Userform = () => {
   }
 
   const sendEmail = () => {
+    console.log("Making fetch...")
     fetch("https://us-central1-landingmirador.cloudfunctions.net/submit", {
       method: "POST",
       mode: "no-cors",

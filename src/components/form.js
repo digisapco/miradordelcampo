@@ -128,7 +128,7 @@ const Userform = () => {
                 type="radio"
                 value="2 alcobas"
                 ref={register({ required: true })}
-              />
+              />{" "}
               <label> 2 Alcobas </label>
             </div>
             <div>
@@ -139,7 +139,7 @@ const Userform = () => {
                 type="radio"
                 value="3 alcobas"
                 ref={register({ required: true })}
-              />
+              />{" "}
               <label> 3 Alcobas </label>
             </div>
           </div>
@@ -151,7 +151,7 @@ const Userform = () => {
               placeholder="politicas"
               name="politicas"
               ref={register}
-            />
+            />{" "}
             <label>
               Acepto términos y{" "}
               <Link className="linkito" to="/politicas">
